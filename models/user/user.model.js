@@ -29,8 +29,6 @@ const UserSchema = new Schema(
   { timestamps: true }
 );
 
-export default mongoose.model("User", UserSchema);
-
 UserSchema.pre("save", function (next) {
   if (this.isModified("password")) {
     this.password = this._hashPassword(this.password);
@@ -47,3 +45,5 @@ UserSchema.methods = {
     return compareSync(password, this.password);
   },
 };
+
+export default mongoose.model("User", UserSchema);

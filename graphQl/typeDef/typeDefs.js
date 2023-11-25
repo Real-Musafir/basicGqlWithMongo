@@ -15,11 +15,6 @@ const typeDefs = gql`
     errorMessage: String
   }
 
-  type DummyMutationResponse {
-    success: Boolean
-    message: String
-  }
-
   ################# QUERY #################
   ################# QUERY #################
   ################# QUERY #################
@@ -33,9 +28,7 @@ const typeDefs = gql`
   ################# MUTATION #################
   ################# MUTATION #################
   type Mutation {
-    signUp(email: String!): Auth
-
-    dummyMutation: DummyMutationResponse
+    signUp(email: String!, password: String!): Auth
   }
 `;
 
