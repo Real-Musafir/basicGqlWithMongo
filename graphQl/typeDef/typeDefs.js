@@ -7,6 +7,7 @@ const typeDefs = gql`
     email: String
     name: String
     userName: String
+    userDetails: User
   }
 
   type Auth {
@@ -17,14 +18,10 @@ const typeDefs = gql`
 
   ################# QUERY #################
   ################# QUERY #################
-  ################# QUERY #################
-  ################# QUERY #################
   type Query {
-    hello: String
+    findAUser(_id: String): User
   }
 
-  ################# MUTATION #################
-  ################# MUTATION #################
   ################# MUTATION #################
   ################# MUTATION #################
   type Mutation {

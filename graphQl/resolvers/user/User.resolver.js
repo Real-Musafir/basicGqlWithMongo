@@ -1,5 +1,4 @@
 import User from "../../../models/user/user.model.js";
-import { v4 as uuidv4 } from "uuid";
 import Chance from "chance";
 
 export default {
@@ -37,6 +36,10 @@ export default {
         return userObject;
       }
     }
+  },
+
+  findAUser: async (_, { _id }) => {
+    return User.findOne({ _id });
   },
 };
 

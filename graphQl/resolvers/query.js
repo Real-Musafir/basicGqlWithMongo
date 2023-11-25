@@ -1,7 +1,9 @@
+import UserResolver from "./user/User.resolver.js";
+import "./indexQuery.js";
+
 // resolvers/query.js
 const QueryResolver = {
-  // Your query resolver implementation
-  hello: () => "Hello, Apollo Server!",
+  findAUser: UserResolver.findAUser,
 };
 
 export default QueryResolver;

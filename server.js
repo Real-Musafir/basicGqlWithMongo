@@ -4,8 +4,10 @@ import express from "express";
 import { ApolloServer } from "apollo-server-express";
 import QueryResolver from "./graphQl/resolvers/query.js";
 import MutationResolver from "./graphQl/resolvers/mutation.js";
+import IndexQuery from "./graphQl/resolvers/indexQuery.js";
 
 const resolvers = {
+  ...IndexQuery, //This is for index query data
   Query: QueryResolver,
   Mutation: MutationResolver,
 };
